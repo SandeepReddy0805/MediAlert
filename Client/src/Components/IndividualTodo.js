@@ -14,11 +14,11 @@ export const IndividualTodo = ({ individualTodo, deleteTodo, editModal }) => {
 
   return (
     <div className="todo">
-      <div>
-        <h3>{individualTodo.Todo}</h3>
+      <div className="todoname">
+        <h5>{individualTodo.Todo}</h5>
+        <p>{individualTodo.description}</p>
       </div>
       <div>
-        <p>{individualTodo.description}</p>
         <div className="actions-div">
           <div onClick={handleEditModal}>
             <Icon size={18} icon={edit2} />

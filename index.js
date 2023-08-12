@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-  
+const https = require('https');
   
 // CORS is enabled for the selected origins
 let corsOptions = {
@@ -55,8 +55,8 @@ app.use(express.static('./Client/build'));
 app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, './Client', 'build', 'index.html'));
 });
-const PORT = 80;
+const PORT = 443;
 console.log('server started on port:',PORT);
 app.listen(PORT,()=>{
-    console.log('Server started at http://localhost')
+    console.log('Server started at http://localhost:443')
 });

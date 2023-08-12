@@ -121,16 +121,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* todo */
-.todo{
-    background-color: #e4e4e4;
-    font-weight: 600;
-    font-size: 16px; 
-    margin: 10px 0px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .todo .actions-div{
     display: flex;
@@ -197,9 +188,10 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 .todos{
-    display: grid;
+    display: flex;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
 .timeinput{
@@ -226,10 +218,13 @@ input::-webkit-inner-spin-button {
     margin-bottom:  0px;
 }
 .todo{
-    width: 20vw;
-    height: 20vh;
+    width: 25vw;
+    height: 10vh;
     border-radius: 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center
+}
+.todoname{
+    width: 16vw;
 }
