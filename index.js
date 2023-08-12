@@ -56,7 +56,5 @@ app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname, './Client', 'build', 'index.html'));
 });
 const PORT = 443;
-console.log('server started on port:',PORT);
-app.listen(PORT,()=>{
-    console.log('Server started at http://localhost:443')
-});
+const server = https.createServer(options,app)
+server.listen(PORT,()=>console.log("server started at port 443"));
